@@ -4,7 +4,7 @@
 const Alexa = require('ask-sdk');
 const dbHelper = require('./helpers/dbHelper');
 const GENERAL_REPROMPT = "What would you like to do?";
-const dynamoDBTableName = "prescription";
+const dynamoDBTableName = "prescriptions";
 
 const APP_NAME = "My Medication";
 const messages = {
