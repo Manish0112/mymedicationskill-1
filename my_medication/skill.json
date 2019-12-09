@@ -28,8 +28,8 @@
       "allowsPurchases": false,
       "locales": {
         "en-US": {
-          "termsOfUseUrl": "http://dabblelab.com/terms",
-          "privacyPolicyUrl": "http://dabblelab.com/privacy"
+          "termsOfUseUrl": "https://github.com/bharathmedarametla/mymedicationskill",
+          "privacyPolicyUrl": "https://github.com/bharathmedarametla/mymedicationskill"
         }
       },
       "isExportCompliant": true,
