@@ -1,1 +1,45 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.2aac6491-20da-41c9-82b8-055c469105cf",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "arn:aws:lambda:us-east-1:567929460603:function:ask-custom-my_medication-default"
+              }
+            }
+          }
+        }
+      },
+      "in_skill_products": [],
+      "resources": {
+        "manifest": {
+          "eTag": "bdf45ae60297fc3fde2b6f546b4cbd4f"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "69c430055afd28f1ac6da14ea4cbe523"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:567929460603:function:ask-custom-my_medication-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-custom-my_medication-default",
+            "handler": "index.handler",
+            "revisionId": "6f5edaa8-43ee-4628-be1f-882d7a6d1cc5",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}
 
