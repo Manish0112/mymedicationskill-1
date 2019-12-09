@@ -23,14 +23,19 @@
                     "name": "GetPrecriptionIntent",
                     "slots": [],
                     "samples": [
-                        "What's my precription"
+                        "What's my precription",
+                        "What are my precriptions",
+                        "my precription"
                     ]
                 },
                 {
                     "name": "CreateReminderIntent",
                     "slots": [],
                     "samples": [
-                        "Create reminder for my precription"
+                        "Create reminder for my precription",
+                        "Create reminder",
+                        "Create reminder for precription",
+                        "remind my medication"
                     ]
                 }
             ],
