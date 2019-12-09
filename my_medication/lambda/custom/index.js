@@ -28,11 +28,11 @@ const LaunchRequestHandler = {
       //const upsServiceClient = serviceClientFactory.getUpsServiceClient();
       //const profileName = await upsServiceClient.getProfileGivenName();
       const speechText = 'Hello! How can I help you with your medication?';
-      const repromptText = 'What would you like to do?';
   
       return handlerInput.responseBuilder
         .speak(speechText)
-        .reprompt(repromptText)
+        .withSimpleCard(APP_NAME, speechText)
+        .reprompt(GENERAL_REPROMPT)
         .getResponse();
 
     } catch (error) {
@@ -67,6 +67,7 @@ const GetPrecriptionHandler = {
         return responseBuilder
                       .speak(noEmailResponse)
                       .withSimpleCard(APP_NAME, noEmailResponse)
+                      .reprompt(GENERAL_REPROMPT)
                       .getResponse();
       }
 
@@ -111,9 +112,10 @@ const GetPrecriptionHandler = {
 
               });
 
-              return responseBuilder
-                  .reprompt(GENERAL_REPROMPT)
+              return responseBuilder                
                   .speak(speechText)
+                  .withSimpleCard(APP_NAME, speechText)
+                  .reprompt(GENERAL_REPROMPT)
                   .getResponse();
             }
 
@@ -122,6 +124,7 @@ const GetPrecriptionHandler = {
           const speechText = "we cannot get your prescription right now. Try again!"
           return responseBuilder
             .speak(speechText)
+            .withSimpleCard(APP_NAME, speechText)
             .getResponse();
         })
 
@@ -161,6 +164,7 @@ const CreateReminderHandler = {
         return responseBuilder
                       .speak(noEmailResponse)
                       .withSimpleCard(APP_NAME, noEmailResponse)
+                      .reprompt(GENERAL_REPROMPT)
                       .getResponse();
       }
 
@@ -213,8 +217,8 @@ const CreateReminderHandler = {
                   await ReminderManagementServiceClient.createReminder(reminderPayload);
 
                   return responseBuilder
-                  .reprompt(GENERAL_REPROMPT)
                   .speak("Reminders created for your prescriptions!")
+                  .reprompt(GENERAL_REPROMPT)
                   .getResponse();
 
                 } catch(error){
